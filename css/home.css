@@ -1,0 +1,185 @@
+
+
+/*********************main**********************/
+
+
+/***conceptions***/
+
+#conceptions a {
+    font-size: 3rem;
+    line-height: 10rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: var(--orange);
+    padding: 1.5rem;
+}
+
+#conceptions p {
+    background-color: #fff;
+    padding: 1rem;
+    color: var(--bleu);
+    font-weight: bold;
+}
+
+#conceptions {
+    background-image: url('../images/bg-header.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15em 0;
+}
+    
+    #conceptions p {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+
+/***prestations***/
+
+#prestations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#prestations h2 {
+    width: 100%;
+}
+
+#prestations article {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+#prestations i {
+    background-color: var(--orange);
+    color: #fff;
+    font-size: 3rem;
+    padding: 1em;
+}
+
+#prestations p {
+    line-height:2.5rem;
+    padding-bottom: 3rem;
+}
+
+.more {
+    background-color: var(--bleu);
+    color: #fff;
+    padding: 2rem;
+    font-weight: bold
+    white-space: nowrap;
+    border: solid 1px var(--bleu);
+}
+
+.more:hover {
+    background-color: #fff;
+    color: var(--bleu);
+    border: solid 1px var(--bleu);
+}
+
+
+/***prestataires***/
+
+#prestataires {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#prestataires h2 {
+    width: 100%;
+}
+
+#prestataires img {
+    border: solid 3px;
+    border-color: var(--bleu);
+}
+
+
+/*************************************************************************/
+/***                           Viewport                                ***/
+/*************************************************************************/
+
+/*tablette*/
+@media screen and (max-width: 1100px) {
+    
+    #conceptions {
+        padding: 5em 0;
+    }
+    
+    #conceptions p {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    
+    #prestations article {
+        width: 45%;
+        padding-bottom: 10rem;
+    }
+    
+    #prestations i {
+        padding: 0.5em;
+    }
+
+    #prestations p {
+        padding-bottom: 0;
+    }
+    
+    .more {
+        width: 70%;
+        text-align: center;
+    }
+    
+    #prestataires a {
+        margin: 5rem;
+    }
+}
+   
+/**************************************/ 
+/*mobile*/
+@media screen and (max-width: 780px) {
+    
+    #conceptions {
+        background: contain;
+    }
+    
+    #conceptions p {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    
+    #prestations article {
+        width: 90%;   
+    }
+    
+    #prestataires a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 2rem;
+    }
+   
+}
+    
+/*****************************************/
+    /*petit mobile*/
+@media screen and (max-width: 630px) {
+    
+    #conceptions p {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #prestations article {
+        width: 80%;   
+    }
+}

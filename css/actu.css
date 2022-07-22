@@ -1,0 +1,221 @@
+/*********************main**********************/
+
+h1 {
+    color: var(--orange);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 8rem;
+}
+
+h1::before, h1::after {
+    content:" - ";
+    color:var(--bleu);
+}
+
+main {
+    display:flex;
+}
+
+
+/***Actualité***/
+
+#actu {
+        width:70%;
+    }
+
+figure {
+    display:flex;
+    padding-bottom: 8rem;
+}
+
+figure img {
+    width: 50%;
+}
+
+figcaption {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.more {
+    background-color: var(--bleu);
+    color: #fff;
+    padding: 2rem;
+    font-weight: bold
+    white-space: nowrap;
+    border: solid 1px var(--bleu);
+    line-height: 8rem;
+}
+
+.more:hover {
+    background-color: #fff;
+    color: var(--bleu);
+    border: solid 1px var(--bleu);
+}
+
+/***Aside***/
+
+main aside {
+    width:30%;
+    padding-top: 2rem;
+}
+
+#temoignages p{
+    padding-left: 2rem;
+}
+
+.quote, .client {
+    display:flex;
+}
+
+.client {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--bleu);
+}
+
+.quote::before{
+    content: url("../images/quote.png") ;
+}
+
+.client::before{
+    content: url("../images/client.png");
+}
+
+#temoignages article::after{
+    content: " -------------------- ";
+    display: flex;
+    justify-content: center;
+    color: var(--orange);
+    padding-bottom: 2rem;
+}
+
+#scroll {
+    height: 20em;
+    overflow: auto;
+}
+
+/***Liste***/
+
+#tweet ul {
+    list-style-image: url("../images/circle.png");
+    
+}
+
+#tweet li {
+    line-height: 2rem;
+    padding: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*************************************************************************/
+/***                           Viewport                                ***/
+/*************************************************************************/
+
+/*Desktop*/
+@media screen and (max-width: 1600px) {
+    
+    
+}
+
+/*****************************************/
+/*tablette*/
+@media screen and (max-width: 1100px) {
+    
+    main {
+        display:block;
+        margin: auto 0;
+    }
+
+    /*Actu*/
+    #actu, #actu img {
+        width:100%;
+    }
+    
+    #actu figure {
+        display: block;
+    }
+    
+    #actu figcaption {
+        margin-left: 0;
+    }
+
+    /*Aside*/
+    main aside {
+        width:90%;
+        padding-top: 0;
+        display: flex;
+    	max-width: 1500px;
+    	margin: auto;
+    }
+    
+    #temoignages {
+        width: 30%;
+    }
+    
+    #tweet {
+        width: 70%;
+    }
+}
+
+
+/******************************************/   
+/*mobile*/
+@media screen and (max-width: 780px) {
+    
+    main {
+        display:block;
+        margin: auto 0;
+    }
+
+    /*Actu*/
+    #actu, #actu img {
+        width:100%;
+    }
+    
+    #actu figure {
+        display: block;
+    }
+    
+    #actu figcaption {
+        margin-left: 0;
+    }
+
+    /*Aside*/
+    main aside {
+        width:90%;
+        display: block;
+        padding-top: 0;
+    	max-width: 1500px;
+    	margin: auto;
+    }
+    
+    #temoignages {
+        width: 100%;
+    }
+    
+    #tweet {
+        width: 100%;
+    }
+   
+}
+
+/****************************************/    
+    /*petit mobile*/
+@media screen and (max-width: 630px) {
+    
+    #conceptions p {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #prestations article {
+        width: 80%;   
+    }
+}

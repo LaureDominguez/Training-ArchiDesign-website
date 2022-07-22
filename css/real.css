@@ -1,0 +1,189 @@
+/*********************main**********************/
+
+h1 {
+    color: var(--orange);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 8rem;
+}
+
+h1::before, h1::after {
+    content:" - ";
+    color:var(--bleu);
+}
+
+main {
+    display:flex;
+}
+
+
+/***Actualité***/
+
+#real {
+    width:70%;
+    padding: 0 5rem;
+}
+
+#real ul {
+    list-style: none;
+}
+
+#real img {
+    border: solid 2px var(--bleu);
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1em
+}
+
+.wrapper img {
+    align-self: stretch;
+    object-fit: cover;
+}
+
+/*l'image s'étale sur 2 lignes*/
+.portrait {
+    grid-row: span 2;
+}
+
+
+/***Aside***/
+
+aside {
+    width:30%;
+    padding-top: 2rem;
+}
+
+#temoignages p{
+    padding-left: 2rem;
+}
+
+.quote, .client {
+    display:flex;
+}
+
+.client {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--bleu);
+}
+
+.quote::before{
+    content: url("../images/quote.png") ;
+}
+
+.client::before{
+    content: url("../images/client.png");
+}
+
+#temoignages article::after{
+    content: " -------------------- ";
+    display: flex;
+    justify-content: center;
+    color: var(--orange);
+    padding-bottom: 2rem;
+}
+
+#scroll {
+    height: 20em;
+    overflow: auto;
+}
+
+/***Liste***/
+
+#tweet ul {
+    list-style: none;
+}
+
+#tweet li::before {
+    content: url("../images/circle.png");
+    margin-right: 1rem;
+}
+
+#tweet li {
+    line-height: 2rem;
+    padding: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/*************************************************************************/
+/***                           Viewport                                ***/
+/*************************************************************************/
+
+/*tablette*/
+@media screen and (max-width: 1100px) {
+    
+    main {
+        display:block;
+        margin: auto 0;
+    }
+
+    /*Actu*/
+    #real {
+        width:100%;
+    }
+
+    /*Aside*/
+    main aside {
+        width:90%;
+        padding-top: 0;
+        display: flex;
+    	max-width: 1500px;
+    	margin: auto;
+    }
+    
+    #temoignages {
+        width: 30%;
+    }
+    
+    #tweet {
+        width: 70%;
+    }
+}
+
+
+/******************************************/   
+/*mobile*/
+@media screen and (max-width: 780px) {
+    
+    main {
+        display:block;
+        margin: auto 0;
+    }
+
+    /*Actu*/
+    #real {
+        width:100%;
+    }
+
+    /*Aside*/
+    main aside {
+        width:90%;
+        display: block;
+        padding-top: 0;
+    	max-width: 1500px;
+    	margin: auto;
+    }
+    
+    #temoignages {
+        width: 100%;
+    }
+    
+    #tweet {
+        width: 100%;
+    }
+   
+}
+
+/****************************************/    
+    /*petit mobile*/
+@media screen and (max-width: 630px) {
+    
+}
